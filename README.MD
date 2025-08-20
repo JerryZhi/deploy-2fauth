@@ -1,31 +1,13 @@
 # 2FAuth 一键部署脚本
 
-`deploy-2fauth.sh` 是一个针对 Debian 13 系统的 **2FAuth 一键部署脚本**，可以自动完成 PHP、数据库、Laravel、Passport、Nginx、HTTPS 等所有配置，帮助你快速部署可用的 2FAuth 服务。
+`deploy-2fauth.sh` 是一个针对 Debian 13 系统的 **2FAuth 一键部署脚本**，可以自动完成 PHP、数据库、Laravel、Passport、Nginx、HTTPS 等所有配置，帮助你快速部署可用的 [2FAuth](https://github.com/Bubka/2FAuth) 服务。
+
+作者自用，但至少一半的BUG归咎于Chatgpt-5，求助罪魁祸首或者仔细阅读报错可能是最快的解决方案。
+
+再次鸣谢[Bubka](https://github.com/Bubka)大佬的[2FAuth](https://github.com/Bubka/2FAuth) 
 
 ---
 
-## 功能特点
-
-* 自动安装 PHP 8.3 及必需扩展
-* 安装 Composer 并拉取 2FAuth 项目依赖
-* 自动生成 Laravel `APP_KEY`
-* 自动创建 SQLite 数据库文件并执行迁移/填充
-* 自动安装 Laravel Passport 密钥
-* 修复 storage / bootstrap/cache 权限
-* 自动配置 Nginx 并启用站点
-* 自动获取 Let's Encrypt HTTPS 证书
-* 提示 Cloudflare Rocket Loader / CSP 注意事项
-* 自动清理 Laravel 缓存
-
----
-
-## 环境要求
-
-* **操作系统**：Debian 13
-* **权限**：root 或 sudo 权限
-* **域名**：公网解析可用的域名（用于自动获取 HTTPS）
-
----
 
 ## 使用方法
 
@@ -61,6 +43,29 @@ sudo ./deploy-2fauth.sh
 https://<你的域名>
 日志路径: /opt/2fauth/storage/logs/laravel.log
 ```
+
+---
+
+## 功能特点
+
+* 自动安装 PHP 8.3 及必需扩展
+* 安装 Composer 并拉取 2FAuth 项目依赖
+* 自动生成 Laravel `APP_KEY`
+* 自动创建 SQLite 数据库文件并执行迁移/填充
+* 自动安装 Laravel Passport 密钥
+* 修复 storage / bootstrap/cache 权限
+* 自动配置 Nginx 并启用站点
+* 自动获取 Let's Encrypt HTTPS 证书
+* 提示 Cloudflare Rocket Loader / CSP 注意事项
+* 自动清理 Laravel 缓存
+
+---
+
+## 环境要求
+
+* **操作系统**：Debian 13 (作者实测可用，其他发行版未知)
+* **权限**：root 或 sudo 权限
+* **域名**：公网解析可用的域名（用于自动获取 HTTPS）
 
 ---
 
