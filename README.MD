@@ -32,7 +32,7 @@
 ### 1. 下载脚本
 
 ```bash
-wget https://yourserver.com/deploy-2fauth.sh -O deploy-2fauth.sh
+wget https://github.com/JerryZhi/deploy-2fauth/raw/refs/heads/main/deploy-2fauth.sh -O deploy-2fauth.sh
 chmod +x deploy-2fauth.sh
 ```
 
